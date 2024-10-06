@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: online_shop
+    database: SNOWFLAKEFIVETRANSDBTRAINING
+    schema: SNOWFLAKEFIVETRANSDBTRAINING  # Replace with your actual schema
+    tables:
+      - name: RAW_ONLINESHOP_ORDERS
+      - name: RAW_STRIPE_PAYMENTS

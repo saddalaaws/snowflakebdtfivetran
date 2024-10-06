@@ -83,3 +83,111 @@ This project is licensed under the sankara Narayana License - see the [LICENSE](
 1. Replace <your_github_repo_url> with the actual URL of your GitHub repository.
 2. You can add more details to the README as needed, especially in the "Building Sample Models in dbt" section, to provide specific instructions or examples related to your models.
 3.Make sure to include any additional files or directories that are part of your project structure.
+
+dbt Project Documentation
+Overview
+This documentation provides an overview of the dbt project, including the models and sources used for data transformation and analysis within the Snowflake data warehouse.
+Project Metadata
+dbt Version: 1.8.7
+Generated At: 2024-10-06
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Models
+1. raw_onlineshop_orders_sale
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ORDER_DATE: DATE - The date of the order.
+TOTAL_ORDERS: NUMBER - The total number of orders.
+TOTAL_SALES: NUMBER - The total sales amount.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 1536 bytes
+Row Count: 48
+Has Stats: Yes
+2. my_second_dbt_model
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 1024 bytes
+Row Count: 1
+Has Stats: Yes
+3. raw_stripe_payments
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+ORDER_ID: NUMBER - The ID of the associated order.
+PAYMENT_METHOD: TEXT - The method of payment used.
+AMOUNT: NUMBER - The payment amount.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 2560 bytes
+Row Count: 113
+Has Stats: Yes
+4. my_first_dbt_model
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 1024 bytes
+Row Count: 2
+Has Stats: Yes
+5. raw_onlineshop_orders
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+USER_ID: NUMBER - The ID of the user who placed the order.
+ORDER_DATE: DATE - The date the order was placed.
+STATUS: TEXT - The status of the order.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 2560 bytes
+Row Count: 99
+Has Stats: Yes
+Sources
+1. RAW_STRIPE_PAYMENTS
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+ORDER_ID: NUMBER - The ID of the associated order.
+PAYMENT_METHOD: TEXT - The method of payment used.
+AMOUNT: NUMBER - The payment amount.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 2560 bytes
+Row Count: 113
+Has Stats: Yes
+2. RAW_ONLINESHOP_ORDERS
+Type: BASE TABLE
+Schema: SNOWFLAKEFIVETRANSDBTRAINING
+Database: SNOWFLAKEFIVETRANSDBTRAINING
+Owner: ACCOUNTADMIN
+Columns:
+ID: NUMBER - The primary key for this table.
+USER_ID: NUMBER - The ID of the user who placed the order.
+ORDER_DATE: DATE - The date the order was placed.
+STATUS: TEXT - The status of the order.
+Statistics:
+Last Modified: 2024-10-06 08:37 UTC
+Approximate Size: 2560 bytes
+Row Count: 99
+Has Stats: Yes
